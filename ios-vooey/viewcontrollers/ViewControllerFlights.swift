@@ -28,7 +28,7 @@ class ViewControllerFlights: UIViewController, UITableViewDataSource, UITableVie
     }
 */
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return MockedData.getInstance().getFlightsTo(idAirport : idAirport).count
+        return getFlights().count
     }
     
 /*
@@ -39,13 +39,21 @@ class ViewControllerFlights: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let adapterFlight = tableView.dequeueReusableCell(withIdentifier: "adapterFlight") as! TableViewCellAdapterFlight
-        let flights = MockedData.getInstance().getFlightsTo(idAirport : idAirport)
-        let flight = flights[indexPath.row]
+        let flight = getFlights()[indexPath.row]
         
         adapterFlight.labelDestination.text = flight.getDestination();
         adapterFlight.labelTime.text = "De \(flight.startInMillis) até \(flight.endInMillis)";
         
         return adapterFlight
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let touchedFlight = getFlights()[indexPath.row]
+        print("Clicked on \(touchedFlight.getDestination())")
+    }
+    
+    private func getFlights() -> Array<Flight> {
+        return MockedData.getInstance().getFlightsTo(idAirport : idAirport)
     }
 
 }
