@@ -42,12 +42,6 @@ class ViewControllerFlights: UIViewController, UITableViewDataSource, UITableVie
         let flights = MockedData.getInstance().getFlightsTo(idAirport : idAirport)
         let flight = flights[indexPath.row]
         
-        print("Total: " + String(flights.count))
-        print(String(flight.idFlight))
-        
-        // let obj = itens[indexPath.section][indexPath.row]
-        // customCell.imageView?.image = UIImage(named : obj)
-        
         adapterFlight.labelDestination.text = flight.getDestination();
         adapterFlight.labelTime.text = "De \(flight.startInMillis) até \(flight.endInMillis)";
         
