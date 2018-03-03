@@ -1,5 +1,5 @@
 //
-//  Company.swift
+//  MockedData.swift
 //  ios-vooey
 //
 //  Created by Aluno on 03/03/2018.
@@ -7,10 +7,3 @@
 //
 
 import Foundation
-
-struct Company {
-    let idCompany : Double?
-    
-    let name : String?
-}
-

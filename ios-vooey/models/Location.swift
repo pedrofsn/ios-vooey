@@ -15,5 +15,4 @@ struct Location {
     let longitude : Double
     let city : String
     let uf : String
-    let name : String
 }

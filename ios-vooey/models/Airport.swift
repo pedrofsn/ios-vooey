@@ -11,8 +11,7 @@ import Foundation
 struct Airport {
     let idAirport : Double
     
-    let shortname : String
+    let name : String
     let location : Location
     
-    let flights : Array<Flight>
 }
