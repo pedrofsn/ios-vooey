@@ -12,6 +12,11 @@
 		5758FAE6204B06CE007DD735 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5758FAE4204B06CE007DD735 /* Main.storyboard */; };
 		5758FAE8204B06CE007DD735 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5758FAE7204B06CE007DD735 /* Assets.xcassets */; };
 		5758FAEB204B06CE007DD735 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5758FAE9204B06CE007DD735 /* LaunchScreen.storyboard */; };
+		5758FAF6204B093E007DD735 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758FAF5204B093E007DD735 /* Airport.swift */; };
+		5758FAF8204B0950007DD735 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758FAF7204B0950007DD735 /* Flight.swift */; };
+		5758FAFA204B0969007DD735 /* Airplane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758FAF9204B0969007DD735 /* Airplane.swift */; };
+		5758FAFC204B097A007DD735 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758FAFB204B097A007DD735 /* Company.swift */; };
+		5758FAFE204B098A007DD735 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758FAFD204B098A007DD735 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		5758FAE7204B06CE007DD735 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5758FAEA204B06CE007DD735 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5758FAEC204B06CE007DD735 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5758FAF5204B093E007DD735 /* Airport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
+		5758FAF7204B0950007DD735 /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
+		5758FAF9204B0969007DD735 /* Airplane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airplane.swift; sourceTree = "<group>"; };
+		5758FAFB204B097A007DD735 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		5758FAFD204B098A007DD735 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,7 @@
 		5758FADF204B06CE007DD735 /* ios-vooey */ = {
 			isa = PBXGroup;
 			children = (
+				5758FAF2204B07F8007DD735 /* models */,
 				5758FAE0204B06CE007DD735 /* AppDelegate.swift */,
 				5758FAE2204B06CE007DD735 /* ViewController.swift */,
 				5758FAE4204B06CE007DD735 /* Main.storyboard */,
@@ -62,6 +73,18 @@
 				5758FAEC204B06CE007DD735 /* Info.plist */,
 			);
 			path = "ios-vooey";
+			sourceTree = "<group>";
+		};
+		5758FAF2204B07F8007DD735 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				5758FAF5204B093E007DD735 /* Airport.swift */,
+				5758FAF7204B0950007DD735 /* Flight.swift */,
+				5758FAF9204B0969007DD735 /* Airplane.swift */,
+				5758FAFB204B097A007DD735 /* Company.swift */,
+				5758FAFD204B098A007DD735 /* Location.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +160,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5758FAE3204B06CE007DD735 /* ViewController.swift in Sources */,
+				5758FAF6204B093E007DD735 /* Airport.swift in Sources */,
+				5758FAFE204B098A007DD735 /* Location.swift in Sources */,
+				5758FAF8204B0950007DD735 /* Flight.swift in Sources */,
+				5758FAFC204B097A007DD735 /* Company.swift in Sources */,
 				5758FAE1204B06CE007DD735 /* AppDelegate.swift in Sources */,
+				5758FAFA204B0969007DD735 /* Airplane.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
