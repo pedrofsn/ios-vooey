@@ -19,9 +19,21 @@ class MockedData {
     let airplane2 : Airplane
     let airport1 : Airport
     let airport2 : Airport
-    var flights = Array<Flight>()
+    var flights : Array<Flight>
     
-    init() {
+    private static var refMock: MockedData? = nil
+    
+    public static func getInstance()->MockedData!
+    {
+        if (MockedData.refMock == nil)
+        {
+            MockedData.refMock = MockedData()
+        }
+        
+        return MockedData.refMock
+    }
+    
+    private init() {
         windowToLandingAndBoarding = (1000 * 60 * 1) as Double // One hour in millis
      
         locationGoiania = Location(
@@ -76,6 +88,7 @@ class MockedData {
             location : locationBrasilia
         )
         
+        flights = Array<Flight>()
         var lastStartInMillis : Double = 0
         for i in 0...30 {
             let pair = arc4random() % 2 == 0

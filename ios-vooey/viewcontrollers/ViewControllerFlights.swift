@@ -7,28 +7,51 @@
 //
 
 import UIKit
-// TODO speacilize in landing and boarding
-class ViewControllerFlights: UIViewController {
+import AVFoundation
 
+class ViewControllerFlights: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    private let idAirport : Double = 0
+
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+/*
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1 // menu.count
+    }
+*/
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return MockedData.getInstance().getFlightsTo(idAirport : idAirport).count
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+/*
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Brasília" // menu[section]
     }
-    */
+ */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let adapterFlight = tableView.dequeueReusableCell(withIdentifier: "adapterFlight") as! TableViewCellAdapterFlight
+        let flights = MockedData.getInstance().getFlightsTo(idAirport : idAirport)
+        let flight = flights[indexPath.row]
+        
+        print("Total: " + String(flights.count))
+        print(String(flight.idFlight))
+        
+        // let obj = itens[indexPath.section][indexPath.row]
+        // customCell.imageView?.image = UIImage(named : obj)
+        
+        adapterFlight.labelDestination.text = flight.getDestination();
+        adapterFlight.labelTime.text = "De \(flight.startInMillis) até \(flight.endInMillis)";
+        
+        return adapterFlight
+    }
 
 }

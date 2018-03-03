@@ -18,6 +18,8 @@
 		5758FAFC204B097A007DD735 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758FAFB204B097A007DD735 /* Company.swift */; };
 		5758FAFE204B098A007DD735 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758FAFD204B098A007DD735 /* Location.swift */; };
 		5758FB01204B1084007DD735 /* ViewControllerFlights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758FB00204B1084007DD735 /* ViewControllerFlights.swift */; };
+		5758FB06204B18DF007DD735 /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758FB05204B18DF007DD735 /* MockedData.swift */; };
+		5758FB0A204B2588007DD735 /* TableViewCellAdapterFlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758FB09204B2588007DD735 /* TableViewCellAdapterFlight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		5758FAFB204B097A007DD735 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		5758FAFD204B098A007DD735 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		5758FB00204B1084007DD735 /* ViewControllerFlights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFlights.swift; sourceTree = "<group>"; };
+		5758FB05204B18DF007DD735 /* MockedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedData.swift; sourceTree = "<group>"; };
+		5758FB09204B2588007DD735 /* TableViewCellAdapterFlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellAdapterFlight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 		5758FADF204B06CE007DD735 /* ios-vooey */ = {
 			isa = PBXGroup;
 			children = (
+				5758FB04204B18CC007DD735 /* dao */,
 				5758FAFF204B0F65007DD735 /* viewcontrollers */,
 				5758FAF2204B07F8007DD735 /* models */,
 				5758FAE0204B06CE007DD735 /* AppDelegate.swift */,
@@ -93,9 +98,26 @@
 		5758FAFF204B0F65007DD735 /* viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
+				5758FB08204B2579007DD735 /* adapters */,
 				5758FB00204B1084007DD735 /* ViewControllerFlights.swift */,
 			);
 			path = viewcontrollers;
+			sourceTree = "<group>";
+		};
+		5758FB04204B18CC007DD735 /* dao */ = {
+			isa = PBXGroup;
+			children = (
+				5758FB05204B18DF007DD735 /* MockedData.swift */,
+			);
+			path = dao;
+			sourceTree = "<group>";
+		};
+		5758FB08204B2579007DD735 /* adapters */ = {
+			isa = PBXGroup;
+			children = (
+				5758FB09204B2588007DD735 /* TableViewCellAdapterFlight.swift */,
+			);
+			path = adapters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +197,8 @@
 				5758FAFE204B098A007DD735 /* Location.swift in Sources */,
 				5758FAF8204B0950007DD735 /* Flight.swift in Sources */,
 				5758FAFC204B097A007DD735 /* Company.swift in Sources */,
+				5758FB06204B18DF007DD735 /* MockedData.swift in Sources */,
+				5758FB0A204B2588007DD735 /* TableViewCellAdapterFlight.swift in Sources */,
 				5758FAE1204B06CE007DD735 /* AppDelegate.swift in Sources */,
 				5758FB01204B1084007DD735 /* ViewControllerFlights.swift in Sources */,
 				5758FAFA204B0969007DD735 /* Airplane.swift in Sources */,

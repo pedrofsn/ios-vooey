@@ -17,17 +17,15 @@ struct Flight {
     let from : Airport
     let to : Airport
     
-    private let mock = MockedData()
-    
     func getDestination() -> String {
-        return from.shortname + " -> " + to.shortname
+        return from.name + " -> " + to.name
     }
     
     func isBoarding(nowInMillis : Double) -> Bool {
-        return nowInMillis < (startInMillis - mock.windowToLandingAndBoarding)
+        return nowInMillis < (startInMillis - MockedData.getInstance().windowToLandingAndBoarding)
     }
     
     func isLanding(nowInMillis : Double) -> Bool {
-        return nowInMillis > (endInMillis + mock.windowToLandingAndBoarding)
+        return nowInMillis > (endInMillis + MockedData.getInstance().windowToLandingAndBoarding)
     }
 }
